@@ -86,7 +86,7 @@ def main():
         MaxFrames = max(len(gt_content), len(recog_content))  # decide the limit for x-axis depending on the length of the two videos
         # plot two subplots
         fig, (ax1, ax2) = plt.subplots(nrows=2, ncols=1, figsize=(10, 2))
-        fig.subplots_adjust(left=0.1, right=0.9, top=0.9, bottom=0.1)
+        fig.subplots_adjust(left=0.15, right=0.9, top=0.9, bottom=0.1)
         # ax1.set_aspect()
 
         # plotting the first subplot
@@ -136,11 +136,11 @@ def main():
     # # Add the arrow to the second subplot
     # ax2.add_artist(con)
 
-        ax1.annotate('Prediction:', xy=(-0.1, 0.5), xycoords='axes fraction',
-                     fontsize=12, ha='center', va='center', weight='bold')
+        ax1.annotate('Prediction:', xy=(-0.01, 0.5), xycoords='axes fraction',
+                     fontsize=12, ha='right', va='center', weight='bold')
 
-        ax2.annotate('Truth:', xy=(-0.1, 0.5), xycoords='axes fraction',
-                     fontsize=12, ha='center', va='center', weight='bold')
+        ax2.annotate('Truth:', xy=(-0.01, 0.5), xycoords='axes fraction',
+                     fontsize=12, ha='right', va='center', weight='bold')
 
         plt.savefig( visual_file + vid.split('.txt')[0] + ".png")
         print (vid.split('.txt')[0])
